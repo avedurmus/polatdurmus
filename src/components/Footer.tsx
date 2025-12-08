@@ -1,6 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/lib/LanguageContext';
 
 export default function Footer() {
+    const { t } = useLanguage();
+
     return (
         <footer className="bg-primary text-gray-300 py-12 border-t border-gray-800">
             <div className="container mx-auto px-4">
@@ -12,24 +17,24 @@ export default function Footer() {
                             Law & Consultancy Firm
                         </p>
                         <p className="mt-4 text-xs text-gray-500">
-                            Providing elite legal services in International Law, Real Estate, and Commercial matters.
+                            {t.footer.brand_desc}
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                        <h4 className="text-lg font-semibold text-white mb-4">{t.footer.quick_links}</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
-                            <li><Link href="#practice-areas" className="hover:text-accent transition-colors">Practice Areas</Link></li>
+                            <li><Link href="/" className="hover:text-accent transition-colors">{t.navbar.home}</Link></li>
+                            <li><Link href="#practice-areas" className="hover:text-accent transition-colors">{t.navbar.practice_areas}</Link></li>
                             <li><Link href="#about" className="hover:text-accent transition-colors">About Us</Link></li>
-                            <li><Link href="#contact" className="hover:text-accent transition-colors">Contact</Link></li>
+                            <li><Link href="#contact" className="hover:text-accent transition-colors">{t.navbar.contact}</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+                        <h4 className="text-lg font-semibold text-white mb-4">{t.footer.contact_title}</h4>
                         <div className="space-y-3 text-sm">
                             <p>
                                 <span className="block text-gray-500 text-xs">Address</span>
@@ -50,7 +55,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
-                    <p>© {new Date().getFullYear()} Polat & Durmuş Law Firm. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Polat & Durmuş Law Firm. {t.footer.rights}</p>
                 </div>
             </div>
         </footer>
