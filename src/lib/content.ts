@@ -14,6 +14,23 @@ export type Content = {
 
         about: string;
     };
+    contact: {
+        title: string;
+        subtitle: string;
+        form: {
+            name: string;
+            email: string;
+            phone: string;
+            message: string;
+            submit: string;
+        };
+        info: {
+            address_title: string;
+            address_value: string[];
+            phone_title: string;
+            email_title: string;
+        };
+    };
     about: {
         title: string;
         subtitle: string;
@@ -56,6 +73,23 @@ export const content: Record<'en' | 'tr', Content> = {
             contact: "Contact",
 
             about: "About Us",
+        },
+        contact: {
+            title: "Contact Us",
+            subtitle: "Get in touch with our expert legal team for a consultation.",
+            form: {
+                name: "Full Name",
+                email: "Email Address",
+                phone: "Phone Number",
+                message: "Your Message",
+                submit: "Send Message",
+            },
+            info: {
+                address_title: "Visit Us",
+                address_value: ["Yalı Mah. Topselvi Cad. No:100", "Mai Residence K:14 D:124", "Kartal, İstanbul"],
+                phone_title: "Call Us",
+                email_title: "Email Us",
+            }
         },
         about: {
             title: "About Polat & Durmuş",
@@ -102,6 +136,23 @@ export const content: Record<'en' | 'tr', Content> = {
             contact: "İletişim",
 
             about: "Hakkımızda",
+        },
+        contact: {
+            title: "İletişim",
+            subtitle: "Uzman hukuk ekibimizle görüşmek için bize ulaşın.",
+            form: {
+                name: "Ad Soyad",
+                email: "E-posta Adresi",
+                phone: "Telefon Numarası",
+                message: "Mesajınız",
+                submit: "Mesaj Gönder",
+            },
+            info: {
+                address_title: "Adres",
+                address_value: ["Yalı Mah. Topselvi Cad. No:100", "Mai Residence K:14 D:124", "Kartal, İstanbul"],
+                phone_title: "Telefon",
+                email_title: "E-posta",
+            }
         },
         about: {
             title: "Polat & Durmuş Hakkında",

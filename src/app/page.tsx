@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import PracticeAreas from "@/components/PracticeAreas";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <PracticeAreas />
+      <Contact />
     </div>
   );
 }
