@@ -14,6 +14,7 @@ export default function Navbar() {
                 </Link>
 
                 <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <Link href="#about" className="hover:text-accent transition-colors">{t.navbar.about}</Link>
                     <Link href="#practice-areas" className="hover:text-accent transition-colors">{t.navbar.practice_areas}</Link>
                     <Link href="#global" className="hover:text-accent transition-colors">{t.navbar.global_reach}</Link>
                     <Link href="#contact" className="hover:text-accent transition-colors">{t.navbar.contact}</Link>

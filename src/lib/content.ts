@@ -11,6 +11,18 @@ export type Content = {
         practice_areas: string;
         global_reach: string;
         contact: string;
+
+        about: string;
+    };
+    about: {
+        title: string;
+        subtitle: string;
+        description_1: string;
+        description_2: string;
+        stats: {
+            label: string;
+            value: string;
+        }[];
     };
     practice_areas: {
         title: string;
@@ -42,6 +54,19 @@ export const content: Record<'en' | 'tr', Content> = {
             practice_areas: "Practice Areas",
             global_reach: "Global Reach",
             contact: "Contact",
+
+            about: "About Us",
+        },
+        about: {
+            title: "About Polat & Durmuş",
+            subtitle: "A legacy of legal excellence bridging local expertise with global vision.",
+            description_1: "Polat & Durmuş Law Firm was established to provide world-class legal services to a diverse portfolio of international and domestic clients. We combine deep local knowledge of the Turkish legal landscape with a broad international perspective, allowing us to navigate complex cross-border matters with precision and authority.",
+            description_2: "Our firm is built on the pillars of integrity, strategic thinking, and unwavering dedication to our clients' success. Whether representing multinational corporations in high-stakes arbitration or guiding individual investors through real estate acquisitions, we approach every case with the same level of rigor and commitment. We don't just interpret the law; we leverage it to create opportunities and secure assets.",
+            stats: [
+                { label: "Combined Experience", value: "20+ Years" },
+                { label: "Practice Areas", value: "12+" },
+                { label: "Global Partners", value: "30+" },
+            ]
         },
         practice_areas: {
             title: "Practice Areas",
@@ -75,6 +100,19 @@ export const content: Record<'en' | 'tr', Content> = {
             practice_areas: "Uzmanlık Alanları",
             global_reach: "Küresel Erişim",
             contact: "İletişim",
+
+            about: "Hakkımızda",
+        },
+        about: {
+            title: "Polat & Durmuş Hakkında",
+            subtitle: "Yerel uzmanlığı küresel vizyonla birleştiren bir hukuki mükemmeliyet mirası.",
+            description_1: "Polat & Durmuş Hukuk Bürosu, uluslararası ve yerli müvekkillerine dünya standartlarında hukuki hizmet sunmak amacıyla kurulmuştur. Türk hukuk sistemine dair derinlemesine bilgimizi, geniş bir uluslararası perspektifle harmanlayarak, karmaşık sınır ötesi meseleleri hassasiyet ve yetkinlikle yönetiyoruz.",
+            description_2: "Büromuz; dürüstlük, stratejik düşünme ve müvekkil başarısına sarsılmaz bağlılık temelleri üzerine inşa edilmiştir. İster çok uluslu şirketleri yüksek riskli tahkim süreçlerinde temsil edelim, ister bireysel yatırımcılara gayrimenkul alımlarında rehberlik edelim, her davaya aynı titizlik ve kararlılıkla yaklaşıyoruz. Hukuku sadece yorumlamıyor; onu fırsatlar yaratmak ve varlıkları güvence altına almak için bir araç olarak kullanıyoruz.",
+            stats: [
+                { label: "Toplam Tecrübe", value: "20+ Yıl" },
+                { label: "Uzmanlık Alanı", value: "12+" },
+                { label: "Küresel Partner", value: "30+" },
+            ]
         },
         practice_areas: {
             title: "Uzmanlık Alanlarımız",
