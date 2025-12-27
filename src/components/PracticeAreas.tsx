@@ -2,21 +2,22 @@
 
 import { Scale, Globe, Building2, Key, Shield, Briefcase } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
+import Link from 'next/link';
 
-const items = [Globe, Shield, Building2, Briefcase, Scale, Key];
+const items = [Globe, Briefcase, Building2, Shield, Scale, Key];
 
 export default function PracticeAreas() {
     const { t } = useLanguage();
 
     return (
-        <section id="practice-areas" className="py-24 bg-white dark:bg-slate-950">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary dark:text-white mb-4">
+        <section id="practice-areas" className="py-32 bg-slate-50 dark:bg-slate-950/50">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-20">
+                    <span className="text-accent text-sm tracking-widest uppercase font-medium">What We Do</span>
+                    <h2 className="text-4xl md:text-5xl font-serif text-primary dark:text-white mt-4 mb-6">
                         {t.practice_areas.title}
                     </h2>
-                    <div className="h-1 w-20 bg-accent mx-auto rounded-full" />
-                    <p className="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                         {t.practice_areas.subtitle}
                     </p>
                 </div>
@@ -24,21 +25,26 @@ export default function PracticeAreas() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {t.practice_areas.items.map((area, index) => {
                         const Icon = items[index];
+                        const slug = (area as any).slug; // Type assertion since we just added it
                         return (
-                            <div
-                                key={index}
-                                className="group p-8 border border-gray-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 rounded-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
-                            >
-                                <div className="w-12 h-12 bg-primary/5 text-accent rounded-full flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                                    <Icon size={24} />
+                            <Link href={`/practice/${slug}`} key={index} className="block group">
+                                <div
+                                    className="h-full p-10 bg-white dark:bg-slate-900 rounded-sm shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 dark:border-slate-800"
+                                >
+                                    <div className="w-14 h-14 bg-gray-50 dark:bg-slate-800 mb-8 flex items-center justify-center rounded-sm text-primary dark:text-white group-hover:bg-accent group-hover:text-white transition-colors duration-500">
+                                        <Icon strokeWidth={1.5} size={28} />
+                                    </div>
+                                    <h3 className="text-2xl font-serif text-primary dark:text-white mb-4 group-hover:text-accent transition-colors">
+                                        {area.title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-light">
+                                        {area.description}
+                                    </p>
+                                    <div className="mt-6 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase tracking-widest">
+                                        {useLanguage().language === 'en' ? 'Read More' : 'Detaylı İncele'}
+                                    </div>
                                 </div>
-                                <h3 className="text-xl font-semibold text-primary dark:text-white mb-3">
-                                    {area.title}
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                                    {area.description}
-                                </p>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>

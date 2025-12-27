@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
@@ -16,10 +16,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Polat & Durmuş | International Law & Consultancy Firm",
-  description: "Polat & Durmuş Law Firm provides expert legal services in International Law, Commercial Law, Real Estate, and Dispute Resolution in Istanbul, Turkey. Serving global clients with excellence.",
-  keywords: ["Law Firm", "Istanbul Lawyer", "International Consultancy", "Turkish Law", "Corporate Law", "Commercial Litigation", "Real Estate Law", "Avukat", "Hukuk Bürosu", "Uluslararası Danışmanlık"],
+  title: "Polat & Durmuş | Premier International Law & Consultancy Firm",
+  description: "Polat & Durmuş offers sophisticated legal counsel for international investors and corporations in Turkey. Specializing in Cross-Border Trade, Real Estate, and Dispute Resolution.",
+  keywords: ["International Law Firm Istanbul", "Foreign Direct Investment Turkey", "Turkish Citizenship Lawyer", "Corporate Arbitration Turkey", "Real Estate Law for Foreigners", "Expat Legal Services Istanbul", "Avukat", "Uluslararası Hukuk Bürosu"],
   authors: [{ name: "Polat & Durmuş" }],
   creator: "Polat & Durmuş",
   publisher: "Polat & Durmuş",
@@ -35,12 +41,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://polatdurmus.com",
-    title: "Polat & Durmuş | International Law & Consultancy Firm",
-    description: "Leading law firm in Istanbul providing comprehensive legal solutions for international and domestic clients.",
-    siteName: "Polat & Durmuş Law Firm",
+    title: "Polat & Durmuş | Strategy & Law",
+    description: "Expert legal partners for global business in Turkey. International Dispute Resolution, Corporate M&A, and Investment Management.",
+    siteName: "Polat & Durmuş",
     images: [
       {
-        url: "https://polatdurmus.com/og-image.jpg", // Ensure this image exists or is added
+        url: "https://polatdurmus.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Polat & Durmuş Law Firm Office",
@@ -49,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Polat & Durmuş | International Law & Consultancy Firm",
-    description: "Expert legal consultancy in Istanbul. International Law, Commercial, and Corporate services.",
+    title: "Polat & Durmuş | International Law Firm",
+    description: "Your strategic legal partner in Turkey. Corporate, Commercial, and Real Estate Law.",
     images: ["https://polatdurmus.com/og-image.jpg"],
   },
   icons: {
@@ -65,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100`}>
         <LanguageProvider>
           <JsonLd />
           <Navbar />

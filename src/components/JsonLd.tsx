@@ -38,7 +38,14 @@ const JsonLd = () => {
                 '@type': 'Country',
                 name: 'Turkey'
             },
-            "International"
+            {
+                '@type': 'Place',
+                name: 'Europe'
+            },
+            {
+                '@type': 'Place',
+                name: 'MENA Region'
+            }
         ],
         knowsLanguage: ["Turkish", "English"],
         sameAs: []

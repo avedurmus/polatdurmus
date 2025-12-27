@@ -46,7 +46,9 @@ export type Content = {
         subtitle: string;
         items: {
             title: string;
+            slug: string;
             description: string;
+            content: string;
         }[];
     };
     footer: {
@@ -61,127 +63,187 @@ export const content: Record<'en' | 'tr', Content> = {
     en: {
         hero: {
             title_suffix: "DURMUŞ",
-            subtitle: "Global Vision. Local Excellence.",
-            description: "Providing sophisticated legal solutions in International Law, Asset Protection, and Real Estate for a discerning global clientele.",
-            cta_consult: "Consult Us",
+            subtitle: "Strategic Legal Partners. Global Reach.",
+            description: "Delivering sophisticated legal counsel in International Trade, Investment Arbitration, and Cross-Border Real Estate for a discerning global clientele.",
+            cta_consult: "Request Consultation",
             cta_expertise: "Our Expertise",
         },
         navbar: {
             home: "Home",
-            practice_areas: "Practice Areas",
-            global_reach: "Global Reach",
+            practice_areas: "Expertise",
+            global_reach: "International Desk",
             contact: "Contact",
 
-            about: "About Us",
+            about: "The Firm",
         },
         contact: {
             title: "Contact Us",
-            subtitle: "Get in touch with our expert legal team for a consultation.",
+            subtitle: "Connect with our legal team for a confidential consultation.",
             form: {
                 name: "Full Name",
                 email: "Email Address",
                 phone: "Phone Number",
-                message: "Your Message",
-                submit: "Send Message",
+                message: "How can we assist you?",
+                submit: "Submit Inquiry",
             },
             info: {
-                address_title: "Visit Us",
-                address_value: ["Yalı Mah. Topselvi Cad. No:100", "Mai Residence K:14 D:124", "Kartal, İstanbul"],
-                phone_title: "Call Us",
-                email_title: "Email Us",
+                address_title: "Headquarters",
+                address_value: ["Yalı Mah. Topselvi Cad. No:100", "Mai Residence K:14 D:124", "Kartal, Istanbul, Turkiye"],
+                phone_title: "Phone",
+                email_title: "Email",
             }
         },
         about: {
-            title: "About Polat & Durmuş",
-            subtitle: "A legacy of legal excellence bridging local expertise with global vision.",
-            description_1: "Polat & Durmuş Law Firm was established to provide world-class legal services to a diverse portfolio of international and domestic clients. We combine deep local knowledge of the Turkish legal landscape with a broad international perspective, allowing us to navigate complex cross-border matters with precision and authority.",
-            description_2: "Our firm is built on the pillars of integrity, strategic thinking, and unwavering dedication to our clients' success. Whether representing multinational corporations in high-stakes arbitration or guiding individual investors through real estate acquisitions, we approach every case with the same level of rigor and commitment. We don't just interpret the law; we leverage it to create opportunities and secure assets.",
+            title: "The Firm",
+            subtitle: "Bridging the gap between Turkish opportunities and global investors.",
+            description_1: "Polat & Durmuş is a premier law firm established to serve as a strategic bridge for international clients operating in Turkiye. We combine the agility of a boutique firm with the sophistication of a global consultancy, ensuring that every legal challenge is met with precision and localized expertise.",
+            description_2: "Our practice is founded on the principles of integrity, foresight, and unwavering dedication. From protecting foreign direct investments to navigating complex regulatory landscapes, we serve as trusted advisors to multinational corporations and private investors alike. We do not just represent you; we champion your interests in a complex legal environment.",
             stats: [
                 { label: "Combined Experience", value: "20+ Years" },
                 { label: "Practice Areas", value: "12+" },
-                { label: "Global Partners", value: "30+" },
+                { label: "Global Reach", value: "Europe & MENA" },
             ]
         },
         practice_areas: {
-            title: "Practice Areas",
-            subtitle: "We specialize in complex legal matters requiring a sophisticated understanding of both Turkish and International law.",
+            title: "Areas of Practice",
+            subtitle: "Comprehensive legal solutions tailored for the complex needs of international business and private wealth.",
             items: [
-                { title: "International Law", description: "Expert guidance in cross-border disputes, transportation law, and international trade regulations." },
-                { title: "Asset Protection", description: "Comprehensive strategies for protecting and developing assets within Turkey for international investors." },
-                { title: "Real Estate Law", description: "Complete management of rental properties, eviction processes, and real estate investment legalities." },
-                { title: "Infrastructure & Transport", description: "Legal support for large-scale infrastructure projects and maritime/land transportation compliance." },
-                { title: "Commercial Law", description: "Tailored corporate solutions including mergers, acquisitions, and contract management." },
-                { title: "Rental Management", description: "End-to-end legal oversight of tenant relationships and regulatory compliance." }
+                {
+                    title: "International Dispute Resolution",
+                    slug: "international-dispute-resolution",
+                    description: "Expert representation in cross-border commercial disputes, arbitration, and enforcement of foreign judgments in Turkiye.",
+                    content: "We provide high-stakes representation in international commercial arbitration and cross-border litigation. Our team is experienced in enforcing foreign court judgments and arbitral awards in Turkey, navigating the complexities of the New York Convention and Turkish International Private Law. We represent clients in disputes arising from construction contracts, international trade, and investment treaties."
+                },
+                {
+                    title: "Foreign Direct Investment",
+                    slug: "foreign-direct-investment",
+                    description: "Strategic guidance for international investors entering the Turkish market, including corporate structuring and regulatory compliance.",
+                    content: "Polat & Durmuş serves as the primary legal partner for foreign companies establishing a presence in Turkey. We advise on the most suitable entity structures (JSC, LLC, Branch Office), draft shareholders' agreements to protect minority/majority rights, and ensure full compliance with Turkish Foreign Direct Investment Law. Our services extend to obtaining necessary permits, tax structuring, and labor law compliance."
+                },
+                {
+                    title: "Real Estate & Citizenship",
+                    slug: "real-estate-citizenship",
+                    description: "End-to-end legal management for high-value real estate acquisitions and Citizenship by Investment (CBI) programs.",
+                    content: "We offer a 'concierge' legal service for international real estate investors. From due diligence (title deed checks, encumbrances) to purchase agreement negotiation and final title transfer, we secure your investment. Furthermore, we specialize in the Turkish Citizenship by Investment program, guiding high-net-worth individuals through the legal eligibility, investment, and application process with a 100% compliance focus."
+                },
+                {
+                    title: "Maritime & Transport Law",
+                    slug: "maritime-transport-law",
+                    description: "Specialized counsel for logistics companies, insurers, and carriers regarding maritime claims and transport regulations.",
+                    content: "Our maritime practice covers charterparty disputes, cargo claims, marine insurance, and ship arrest procedures in Turkish ports. We advise P&I Clubs, logistics companies, and freight forwarders on CMR Convention liabilities and local transport regulations. We understand the time-critical nature of maritime trade and provide rapid legal intervention."
+                },
+                {
+                    title: "Corporate & M&A",
+                    slug: "corporate-ma",
+                    description: "Advising on mergers, acquisitions, joint ventures, and corporate governance for foreign and domestic entities.",
+                    content: "We facilitate complex M&A transactions, offering comprehensive legal due diligence, share purchase agreement (SPA) drafting, and competition board filings. Our corporate retainer services ensure that your day-to-day business operations—from contract management to board resolutions—comply with the Turkish Commercial Code."
+                },
+                {
+                    title: "Real Estate Asset Management",
+                    slug: "real-estate-asset-management",
+                    description: "Legal oversight of property portfolios, including lease structuring, tenant relations, and asset protection.",
+                    content: "For investors with multiple properties, we provide ongoing legal asset management. This includes drafting \"corporate-standard\" commercial lease agreements, managing rent reviews, and handling eviction proceedings swiftly when necessary. We treat your real estate portfolio as a business, minimizing legal risks and maximizing stability."
+                }
             ]
         },
         footer: {
-            brand_desc: "Providing elite legal services in International Law, Real Estate, and Commercial matters.",
-            quick_links: "Quick Links",
+            brand_desc: "Polat & Durmuş Law Firm | Istanbul",
+            quick_links: "Navigation",
             contact_title: "Contact",
-            rights: "All rights reserved.",
+            rights: "All rights reserved. Attorney Advertising.",
         }
     },
     tr: {
         hero: {
             title_suffix: "DURMUŞ",
-            subtitle: "Küresel Vizyon. Yerelden Globale.",
-            description: "Uluslararası Hukuk, Varlık Koruma ve Gayrimenkul alanlarında seçkin müvekkiller için sofistike hukuki çözümler sunuyoruz.",
-            cta_consult: "Danışmanlık Al",
+            subtitle: "Stratejik Çözüm Ortağınız. Küresel Vizyon.",
+            description: "Uluslararası Ticaret, Yatırım Tahkimi ve Sınır Ötesi Gayrimenkul alanlarında seçkin müvekkiller için sofistike hukuki çözümler.",
+            cta_consult: "Danışmanlık Talep Et",
             cta_expertise: "Uzmanlıklarımız",
         },
         navbar: {
             home: "Ana Sayfa",
-            practice_areas: "Uzmanlık Alanları",
-            global_reach: "Küresel Erişim",
+            practice_areas: "Uzmanlıklar",
+            global_reach: "Uluslararası Desk",
             contact: "İletişim",
 
-            about: "Hakkımızda",
+            about: "Büromuz",
         },
         contact: {
-            title: "İletişim",
-            subtitle: "Uzman hukuk ekibimizle görüşmek için bize ulaşın.",
+            title: "Bize Ulaşın",
+            subtitle: "Gizlilik esaslı ön görüşme için hukuk ekibimizle iletişime geçin.",
             form: {
                 name: "Ad Soyad",
                 email: "E-posta Adresi",
                 phone: "Telefon Numarası",
-                message: "Mesajınız",
-                submit: "Mesaj Gönder",
+                message: "Size nasıl yardımcı olabiliriz?",
+                submit: "Gönder",
             },
             info: {
-                address_title: "Adres",
+                address_title: "Merkez Ofis",
                 address_value: ["Yalı Mah. Topselvi Cad. No:100", "Mai Residence K:14 D:124", "Kartal, İstanbul"],
                 phone_title: "Telefon",
                 email_title: "E-posta",
             }
         },
         about: {
-            title: "Polat & Durmuş Hakkında",
-            subtitle: "Yerel uzmanlığı küresel vizyonla birleştiren bir hukuki mükemmeliyet mirası.",
-            description_1: "Polat & Durmuş Hukuk Bürosu, uluslararası ve yerli müvekkillerine dünya standartlarında hukuki hizmet sunmak amacıyla kurulmuştur. Türk hukuk sistemine dair derinlemesine bilgimizi, geniş bir uluslararası perspektifle harmanlayarak, karmaşık sınır ötesi meseleleri hassasiyet ve yetkinlikle yönetiyoruz.",
-            description_2: "Büromuz; dürüstlük, stratejik düşünme ve müvekkil başarısına sarsılmaz bağlılık temelleri üzerine inşa edilmiştir. İster çok uluslu şirketleri yüksek riskli tahkim süreçlerinde temsil edelim, ister bireysel yatırımcılara gayrimenkul alımlarında rehberlik edelim, her davaya aynı titizlik ve kararlılıkla yaklaşıyoruz. Hukuku sadece yorumlamıyor; onu fırsatlar yaratmak ve varlıkları güvence altına almak için bir araç olarak kullanıyoruz.",
+            title: "Büromuz Hakkında",
+            subtitle: "Türkiye'deki fırsatları küresel yatırımcılarla buluşturan stratejik köprünüz.",
+            description_1: "Polat & Durmuş, Türkiye'de faaliyet gösteren uluslararası müvekkillere stratejik bir köprü görevi görmek üzere kurulmuş seçkin bir hukuk bürosudur. Butik bir firmanın çevikliğini küresel bir danışmanlık firmasının sofistike yapısıyla birleştirerek, her türlü hukuki zorluğu hassasiyet ve yerel uzmanlıkla karşılıyoruz.",
+            description_2: "Pratiğimiz dürüstlük, öngörü ve sarsılmaz bir adanmışlık ilkelerine dayanmaktadır. Yabancı doğrudan yatırımların korunmasından karmaşık mevzuat süreçlerinin yönetilmesine kadar, çok uluslu şirketlere ve bireysel yatırımcılara güvenilir danışmanlar olarak hizmet veriyoruz. Sadece temsilciniz değil, karmaşık hukuk düzeninde menfaatlerinizin savunucusuyuz.",
             stats: [
                 { label: "Toplam Tecrübe", value: "20+ Yıl" },
                 { label: "Uzmanlık Alanı", value: "12+" },
-                { label: "Küresel Partner", value: "30+" },
+                { label: "Küresel Erişim", value: "Avrupa & ODKA" },
             ]
         },
         practice_areas: {
-            title: "Uzmanlık Alanlarımız",
-            subtitle: "Türk ve Uluslararası hukukun karmaşık yapısında uzmanlaşmış kadromuzla yanınızdayız.",
+            title: "Çalışma Alanlarımız",
+            subtitle: "Uluslararası ticaretin ve özel varlık yönetiminin karmaşık ihtiyaçlarına yönelik kapsamlı hukuki çözümler.",
             items: [
-                { title: "Uluslararası Hukuk", description: "Sınır ötesi ticari uyuşmazlıklar, uluslararası tahkim süreçleri ve çok uluslu şirketlerin hukuki danışmanlığı konusunda uzmanlaşmış ekibimizle küresel çözüm ortaklığı sunuyoruz." },
-                { title: "Varlık Koruma", description: "Yabancı ve yerli yatırımcıların Türkiye’deki mal varlıklarının hukuki güvenliği, vergi planlaması ve risk yönetimi konularında stratejik danışmanlık hizmetleri sağlıyoruz." },
-                { title: "Gayrimenkul Hukuku", description: "Gayrimenkul alım-satım süreçleri, inşaat projelerinin hukuki altyapısı, kentsel dönüşüm ve imar hukuku konularında kapsamlı hukuki destek veriyoruz." },
-                { title: "Altyapı ve Taşıma", description: "Büyük ölçekli altyapı projeleri, deniz ve kara taşımacılığı hukuku ile lojistik sektörüne yönelik regülasyon uyumluluğu konularında deneyimli kadromuzla hizmetinizdeyiz." },
-                { title: "Ticaret Hukuku", description: "Şirketler hukuku, birleşme ve devralmalar, ticari sözleşmelerin hazırlanması ve müzakeresi süreçlerinde kurumsal müvekkillerimize özel çözümler üretiyoruz." },
-                { title: "Kira Yönetimi", description: "Ticari ve konut kiralama süreçlerinin yönetimi, kira sözleşmelerinin düzenlenmesi ve kiracı-kiralayan uyuşmazlıklarının çözümü konusunda profesyonel destek sağlıyoruz." }
+                {
+                    title: "Uluslararası Uyuşmazlık Çözümü",
+                    slug: "international-dispute-resolution",
+                    description: "Sınır ötesi ticari ihtilaflar, tahkim ve yabancı mahkeme kararlarının Türkiye'de tanınması/tenfizi süreçlerinde uzman temsil.",
+                    content: "Uluslararası ticari tahkim ve sınır ötesi davalarda üst düzey temsil sunuyoruz. Yabancı mahkeme ve hakem kararlarının Türkiye'de tanınması ve tenfizi süreçlerinde, New York Konvansiyonu ve MÖHUK konusundaki derin tecrübemizle hareket ediyoruz. İnşaat sözleşmeleri, uluslararası satım ve yatırım anlaşmazlıklarında müvekkillerimizin haklarını koruyoruz."
+                },
+                {
+                    title: "Yabancı Doğrudan Yatırımlar",
+                    slug: "foreign-direct-investment",
+                    description: "Türkiye pazarına giren uluslararası yatırımcılar için şirket kuruluşu, ortak girişimler ve mevzuat uyumu konusunda stratejik rehberlik.",
+                    content: "Polat & Durmuş, Türkiye'de faaliyet göstermek isteyen yabancı şirketlerin birincil hukuki çözüm ortağıdır. En uygun şirket yapısının (A.Ş., Ltd., Şube) belirlenmesinden, azınlık/çoğunluk haklarını koruyan hissedarlar sözleşmelerinin (SHA) hazırlanmasına kadar tüm süreçte yanınızdayız. Çalışma izinleri, vergi yapılandırması ve teşvik mevzuatı konularında kapsamlı danışmanlık veriyoruz."
+                },
+                {
+                    title: "Gayrimenkul ve Vatandaşlık",
+                    slug: "real-estate-citizenship",
+                    description: "Yüksek değerli gayrimenkul alımları ve Yatırım Yoluyla Türk Vatandaşlığı (CBI) programları için uçtan uca hukuki yönetim.",
+                    content: "Uluslararası gayrimenkul yatırımcıları için 'concierge' standartlarında hukuki hizmet sunuyoruz. Gayrimenkulün hukuki risk analizinden (due diligence) satış sözleşmesi müzakerelerine ve tapu devrine kadar yatırımınızı güvence altına alıyoruz. Ayrıca, Yatırım Yoluyla Türk Vatandaşlığı programında %100 uyumluluk odaklı yaklaşımımızla, başvuru sürecinin her aşamasında rehberlik ediyoruz."
+                },
+                {
+                    title: "Deniz Ticareti ve Taşıma",
+                    slug: "maritime-transport-law",
+                    description: "Lojistik şirketleri, sigortacılar ve taşıyıcılar için denizcilik alacakları ve taşıma hukuku regülasyonları konusunda uzman danışmanlık.",
+                    content: "Deniz ticareti pratiğimiz; çarter sözleşmeleri, yük hasar talepleri, deniz sigortaları ve gemi tutuklama prosedürlerini kapsar. P&I Kulüpleri, lojistik firmaları ve taşıyıcılar için CMR Konvansiyonu ve yerel taşıma mevzuatı kapsamında danışmanlık veriyoruz. Ticaretin zamanla yarıştığını biliyor, hukuki sorunlara hızlı ve etkili müdahalelerle yaklaşıyoruz."
+                },
+                {
+                    title: "Şirketler Hukuku ve Birleşmeler",
+                    slug: "corporate-ma",
+                    description: "Yerli ve yabancı şirketler için birleşme, devralma, ortak girişimler ve kurumsal yönetim danışmanlığı.",
+                    content: "Karmaşık birleşme ve devralma (M&A) işlemlerinde, hukuki inceleme (due diligence), hisse devir sözleşmesi (SPA) hazırlığı ve rekabet kurulu bildirimleri konularında hizmet veriyoruz. Kurumsal yönetim danışmanlığımızla, şirketinizin günlük operasyonlarının ve yönetim kurulu kararlarının Türk Ticaret Kanunu'na tam uyumlu olmasını sağlıyoruz."
+                },
+                {
+                    title: "Gayrimenkul Varlık Yönetimi",
+                    slug: "real-estate-asset-management",
+                    description: "Gayrimenkul portföylerinin hukuki denetimi, kira sözleşmelerinin yapılandırılması ve varlık koruma stratejileri.",
+                    content: "Birden fazla mülkü olan yatırımcılar için sürekli hukuki varlık yönetimi sağlıyoruz. Kurumsal standartlarda kira sözleşmelerinin hazırlanması, kira artış süreçlerinin yönetimi ve gerektiğinde tahliye süreçlerinin hızlıca yürütülmesi konularında uzmanız. Gayrimenkul portföyünüzü bir işletme titizliğiyle ele alıyor, hukuki riskleri minimize ediyoruz."
+                }
             ]
         },
         footer: {
-            brand_desc: "Uluslararası Hukuk, Gayrimenkul ve Ticaret alanlarında seçkin hukuki hizmetler.",
-            quick_links: "Hızlı Bağlantılar",
+            brand_desc: "Polat & Durmuş Hukuk Bürosu | İstanbul",
+            quick_links: "Menü",
             contact_title: "İletişim",
-            rights: "Tüm hakları saklıdır.",
+            rights: "Tüm hakları saklıdır. Avukatlık reklam yasağına uygundur.",
         }
     }
 };

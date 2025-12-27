@@ -12,20 +12,22 @@ const config: Config = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: {
-                    DEFAULT: "#0f172a", // Slate 900
-                    foreground: "#f8fafc", // Slate 50
+                    DEFAULT: "#0B1120", // Deepest Navy
+                    foreground: "#f8fafc",
                 },
                 secondary: {
-                    DEFAULT: "#94a3b8", // Slate 400
-                    foreground: "#0f172a", // Slate 900
+                    DEFAULT: "#334155", // Slate 700
+                    foreground: "#f8fafc",
                 },
                 accent: {
-                    DEFAULT: "#c0a062", // Gold-ish
+                    DEFAULT: "#C5A065", // Muted Gold / Bronze
+                    dark: "#9E7F48",
+                    light: "#E5C585",
                     foreground: "#0f172a",
                 }
             },
             fontFamily: {
-                serif: ['var(--font-geist-mono)', 'serif'], // Placeholder, we might want a real serif font later
+                serif: ['var(--font-playfair)', 'serif'],
                 sans: ['var(--font-geist-sans)', 'sans-serif'],
             },
         },

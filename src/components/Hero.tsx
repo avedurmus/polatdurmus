@@ -7,38 +7,47 @@ export default function Hero() {
     const { t } = useLanguage();
 
     return (
-        <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-primary">
-            {/* Background Gradient/Overlay */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-800 to-slate-950 opacity-90 z-0" />
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-primary">
+            {/* Background Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-slate-900/90 z-0" />
 
-            {/* Abstract Elite Visual Pattern */}
-            <div className="absolute inset-0 z-0 opacity-20 bg-[url('/grid.svg')] bg-center" />
+            {/* Elegant Noise/Grain Overlay for Texture */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('/noise.svg')]" />
 
-            <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                <h2 className="text-secondary font-medium tracking-widest text-sm md:text-base mb-6 uppercase">
-                    {t.hero.subtitle}
-                </h2>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-tight">
-                    POLAT & <span className="text-accent">{t.hero.title_suffix}</span>
+            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+                <div className="mb-8 inline-block">
+                    <span className="py-1 px-3 border border-gray-600 text-gray-300 text-[10px] md:text-xs tracking-[0.2em] uppercase rounded-sm">
+                        {t.hero.subtitle}
+                    </span>
+                </div>
+
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-white mb-8 leading-tight tracking-tight">
+                    POLAT <span className="text-accent">&</span> {t.hero.title_suffix}
                 </h1>
-                <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+
+                <p className="text-lg md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                     {t.hero.description}
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <Link
                         href="#contact"
-                        className="px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-sm hover:bg-white hover:text-primary transition-all duration-300 min-w-[160px]"
+                        className="px-8 py-4 bg-accent text-primary font-bold tracking-wide rounded-sm hover:bg-white transition-all duration-300 min-w-[180px] shadow-lg shadow-accent/20"
                     >
                         {t.hero.cta_consult}
                     </Link>
                     <Link
                         href="#practice-areas"
-                        className="px-8 py-4 border border-gray-600 text-white font-medium rounded-sm hover:border-accent hover:text-accent transition-all duration-300 min-w-[160px]"
+                        className="px-8 py-4 border border-gray-500 text-gray-300 font-medium tracking-wide rounded-sm hover:border-white hover:text-white transition-all duration-300 min-w-[180px]"
                     >
                         {t.hero.cta_expertise}
                     </Link>
                 </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+                <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
             </div>
         </section>
     );
