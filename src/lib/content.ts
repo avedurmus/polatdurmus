@@ -13,6 +13,7 @@ export type Content = {
         contact: string;
 
         about: string;
+        book_appointment: string;
     };
     contact: {
         title: string;
@@ -49,6 +50,7 @@ export type Content = {
             slug: string;
             description: string;
             content: string;
+            image: string;
         }[];
     };
     footer: {
@@ -75,6 +77,7 @@ export const content: Record<'en' | 'tr', Content> = {
             contact: "Contact",
 
             about: "The Firm",
+            book_appointment: "Book Appointment",
         },
         contact: {
             title: "Contact Us",
@@ -112,37 +115,43 @@ export const content: Record<'en' | 'tr', Content> = {
                     title: "International Dispute Resolution",
                     slug: "international-dispute-resolution",
                     description: "Expert representation in cross-border commercial disputes, arbitration, and enforcement of foreign judgments in Turkiye.",
-                    content: "We provide high-stakes representation in international commercial arbitration and cross-border litigation. Our team is experienced in enforcing foreign court judgments and arbitral awards in Turkey, navigating the complexities of the New York Convention and Turkish International Private Law. We represent clients in disputes arising from construction contracts, international trade, and investment treaties."
+                    content: "We provide high-stakes representation in international commercial arbitration and cross-border litigation. Our team is experienced in enforcing foreign court judgments and arbitral awards in Turkey, navigating the complexities of the New York Convention and Turkish International Private Law. We represent clients in disputes arising from construction contracts, international trade, and investment treaties.",
+                    image: "/images/international-dispute.jpg"
                 },
                 {
                     title: "Foreign Direct Investment",
                     slug: "foreign-direct-investment",
                     description: "Strategic guidance for international investors entering the Turkish market, including corporate structuring and regulatory compliance.",
-                    content: "Polat & Durmuş serves as the primary legal partner for foreign companies establishing a presence in Turkey. We advise on the most suitable entity structures (JSC, LLC, Branch Office), draft shareholders' agreements to protect minority/majority rights, and ensure full compliance with Turkish Foreign Direct Investment Law. Our services extend to obtaining necessary permits, tax structuring, and labor law compliance."
+                    content: "Polat & Durmuş serves as the primary legal partner for foreign companies establishing a presence in Turkey. We advise on the most suitable entity structures (JSC, LLC, Branch Office), draft shareholders' agreements to protect minority/majority rights, and ensure full compliance with Turkish Foreign Direct Investment Law. Our services extend to obtaining necessary permits, tax structuring, and labor law compliance.",
+                    image: "/images/foreign-investment.jpg"
                 },
                 {
                     title: "Real Estate & Citizenship",
                     slug: "real-estate-citizenship",
                     description: "End-to-end legal management for high-value real estate acquisitions and Citizenship by Investment (CBI) programs.",
-                    content: "We offer a 'concierge' legal service for international real estate investors. From due diligence (title deed checks, encumbrances) to purchase agreement negotiation and final title transfer, we secure your investment. Furthermore, we specialize in the Turkish Citizenship by Investment program, guiding high-net-worth individuals through the legal eligibility, investment, and application process with a 100% compliance focus."
+                    content: "We offer a 'concierge' legal service for international real estate investors. From due diligence (title deed checks, encumbrances) to purchase agreement negotiation and final title transfer, we secure your investment. Furthermore, we specialize in the Turkish Citizenship by Investment program, guiding high-net-worth individuals through the legal eligibility, investment, and application process with a 100% compliance focus.",
+                    image: "/images/real-estate.jpg"
                 },
                 {
                     title: "Maritime & Transport Law",
                     slug: "maritime-transport-law",
                     description: "Specialized counsel for logistics companies, insurers, and carriers regarding maritime claims and transport regulations.",
-                    content: "Our maritime practice covers charterparty disputes, cargo claims, marine insurance, and ship arrest procedures in Turkish ports. We advise P&I Clubs, logistics companies, and freight forwarders on CMR Convention liabilities and local transport regulations. We understand the time-critical nature of maritime trade and provide rapid legal intervention."
+                    content: "Our maritime practice covers charterparty disputes, cargo claims, marine insurance, and ship arrest procedures in Turkish ports. We advise P&I Clubs, logistics companies, and freight forwarders on CMR Convention liabilities and local transport regulations. We understand the time-critical nature of maritime trade and provide rapid legal intervention.",
+                    image: "/images/maritime-law.jpg"
                 },
                 {
                     title: "Corporate & M&A",
                     slug: "corporate-ma",
                     description: "Advising on mergers, acquisitions, joint ventures, and corporate governance for foreign and domestic entities.",
-                    content: "We facilitate complex M&A transactions, offering comprehensive legal due diligence, share purchase agreement (SPA) drafting, and competition board filings. Our corporate retainer services ensure that your day-to-day business operations—from contract management to board resolutions—comply with the Turkish Commercial Code."
+                    content: "We facilitate complex M&A transactions, offering comprehensive legal due diligence, share purchase agreement (SPA) drafting, and competition board filings. Our corporate retainer services ensure that your day-to-day business operations—from contract management to board resolutions—comply with the Turkish Commercial Code.",
+                    image: "/images/corporate-ma.jpg"
                 },
                 {
                     title: "Real Estate Asset Management",
                     slug: "real-estate-asset-management",
                     description: "Legal oversight of property portfolios, including lease structuring, tenant relations, and asset protection.",
-                    content: "For investors with multiple properties, we provide ongoing legal asset management. This includes drafting \"corporate-standard\" commercial lease agreements, managing rent reviews, and handling eviction proceedings swiftly when necessary. We treat your real estate portfolio as a business, minimizing legal risks and maximizing stability."
+                    content: "For investors with multiple properties, we provide ongoing legal asset management. This includes drafting \"corporate-standard\" commercial lease agreements, managing rent reviews, and handling eviction proceedings swiftly when necessary. We treat your real estate portfolio as a business, minimizing legal risks and maximizing stability.",
+                    image: "/images/asset-management.jpg"
                 }
             ]
         },
@@ -168,6 +177,7 @@ export const content: Record<'en' | 'tr', Content> = {
             contact: "İletişim",
 
             about: "Büromuz",
+            book_appointment: "Randevu Al",
         },
         contact: {
             title: "Bize Ulaşın",
@@ -205,37 +215,43 @@ export const content: Record<'en' | 'tr', Content> = {
                     title: "Uluslararası Uyuşmazlık Çözümü",
                     slug: "international-dispute-resolution",
                     description: "Sınır ötesi ticari ihtilaflar, tahkim ve yabancı mahkeme kararlarının Türkiye'de tanınması/tenfizi süreçlerinde uzman temsil.",
-                    content: "Uluslararası ticari tahkim ve sınır ötesi davalarda üst düzey temsil sunuyoruz. Yabancı mahkeme ve hakem kararlarının Türkiye'de tanınması ve tenfizi süreçlerinde, New York Konvansiyonu ve MÖHUK konusundaki derin tecrübemizle hareket ediyoruz. İnşaat sözleşmeleri, uluslararası satım ve yatırım anlaşmazlıklarında müvekkillerimizin haklarını koruyoruz."
+                    content: "Uluslararası ticari tahkim ve sınır ötesi davalarda üst düzey temsil sunuyoruz. Yabancı mahkeme ve hakem kararlarının Türkiye'de tanınması ve tenfizi süreçlerinde, New York Konvansiyonu ve MÖHUK konusundaki derin tecrübemizle hareket ediyoruz. İnşaat sözleşmeleri, uluslararası satım ve yatırım anlaşmazlıklarında müvekkillerimizin haklarını koruyoruz.",
+                    image: "/images/international-dispute.jpg"
                 },
                 {
                     title: "Yabancı Doğrudan Yatırımlar",
                     slug: "foreign-direct-investment",
                     description: "Türkiye pazarına giren uluslararası yatırımcılar için şirket kuruluşu, ortak girişimler ve mevzuat uyumu konusunda stratejik rehberlik.",
-                    content: "Polat & Durmuş, Türkiye'de faaliyet göstermek isteyen yabancı şirketlerin birincil hukuki çözüm ortağıdır. En uygun şirket yapısının (A.Ş., Ltd., Şube) belirlenmesinden, azınlık/çoğunluk haklarını koruyan hissedarlar sözleşmelerinin (SHA) hazırlanmasına kadar tüm süreçte yanınızdayız. Çalışma izinleri, vergi yapılandırması ve teşvik mevzuatı konularında kapsamlı danışmanlık veriyoruz."
+                    content: "Polat & Durmuş, Türkiye'de faaliyet göstermek isteyen yabancı şirketlerin birincil hukuki çözüm ortağıdır. En uygun şirket yapısının (A.Ş., Ltd., Şube) belirlenmesinden, azınlık/çoğunluk haklarını koruyan hissedarlar sözleşmelerinin (SHA) hazırlanmasına kadar tüm süreçte yanınızdayız. Çalışma izinleri, vergi yapılandırması ve teşvik mevzuatı konularında kapsamlı danışmanlık veriyoruz.",
+                    image: "/images/foreign-investment.jpg"
                 },
                 {
                     title: "Gayrimenkul ve Vatandaşlık",
                     slug: "real-estate-citizenship",
                     description: "Yüksek değerli gayrimenkul alımları ve Yatırım Yoluyla Türk Vatandaşlığı (CBI) programları için uçtan uca hukuki yönetim.",
-                    content: "Uluslararası gayrimenkul yatırımcıları için 'concierge' standartlarında hukuki hizmet sunuyoruz. Gayrimenkulün hukuki risk analizinden (due diligence) satış sözleşmesi müzakerelerine ve tapu devrine kadar yatırımınızı güvence altına alıyoruz. Ayrıca, Yatırım Yoluyla Türk Vatandaşlığı programında %100 uyumluluk odaklı yaklaşımımızla, başvuru sürecinin her aşamasında rehberlik ediyoruz."
+                    content: "Uluslararası gayrimenkul yatırımcıları için 'concierge' standartlarında hukuki hizmet sunuyoruz. Gayrimenkulün hukuki risk analizinden (due diligence) satış sözleşmesi müzakerelerine ve tapu devrine kadar yatırımınızı güvence altına alıyoruz. Ayrıca, Yatırım Yoluyla Türk Vatandaşlığı programında %100 uyumluluk odaklı yaklaşımımızla, başvuru sürecinin her aşamasında rehberlik ediyoruz.",
+                    image: "/images/real-estate.jpg"
                 },
                 {
                     title: "Deniz Ticareti ve Taşıma",
                     slug: "maritime-transport-law",
                     description: "Lojistik şirketleri, sigortacılar ve taşıyıcılar için denizcilik alacakları ve taşıma hukuku regülasyonları konusunda uzman danışmanlık.",
-                    content: "Deniz ticareti pratiğimiz; çarter sözleşmeleri, yük hasar talepleri, deniz sigortaları ve gemi tutuklama prosedürlerini kapsar. P&I Kulüpleri, lojistik firmaları ve taşıyıcılar için CMR Konvansiyonu ve yerel taşıma mevzuatı kapsamında danışmanlık veriyoruz. Ticaretin zamanla yarıştığını biliyor, hukuki sorunlara hızlı ve etkili müdahalelerle yaklaşıyoruz."
+                    content: "Deniz ticareti pratiğimiz; çarter sözleşmeleri, yük hasar talepleri, deniz sigortaları ve gemi tutuklama prosedürlerini kapsar. P&I Kulüpleri, lojistik firmaları ve taşıyıcılar için CMR Konvansiyonu ve yerel taşıma mevzuatı kapsamında danışmanlık veriyoruz. Ticaretin zamanla yarıştığını biliyor, hukuki sorunlara hızlı ve etkili müdahalelerle yaklaşıyoruz.",
+                    image: "/images/maritime-law.jpg"
                 },
                 {
                     title: "Şirketler Hukuku ve Birleşmeler",
                     slug: "corporate-ma",
                     description: "Yerli ve yabancı şirketler için birleşme, devralma, ortak girişimler ve kurumsal yönetim danışmanlığı.",
-                    content: "Karmaşık birleşme ve devralma (M&A) işlemlerinde, hukuki inceleme (due diligence), hisse devir sözleşmesi (SPA) hazırlığı ve rekabet kurulu bildirimleri konularında hizmet veriyoruz. Kurumsal yönetim danışmanlığımızla, şirketinizin günlük operasyonlarının ve yönetim kurulu kararlarının Türk Ticaret Kanunu'na tam uyumlu olmasını sağlıyoruz."
+                    content: "Karmaşık birleşme ve devralma (M&A) işlemlerinde, hukuki inceleme (due diligence), hisse devir sözleşmesi (SPA) hazırlığı ve rekabet kurulu bildirimleri konularında hizmet veriyoruz. Kurumsal yönetim danışmanlığımızla, şirketinizin günlük operasyonlarının ve yönetim kurulu kararlarının Türk Ticaret Kanunu'na tam uyumlu olmasını sağlıyoruz.",
+                    image: "/images/corporate-ma.jpg"
                 },
                 {
                     title: "Gayrimenkul Varlık Yönetimi",
                     slug: "real-estate-asset-management",
                     description: "Gayrimenkul portföylerinin hukuki denetimi, kira sözleşmelerinin yapılandırılması ve varlık koruma stratejileri.",
-                    content: "Birden fazla mülkü olan yatırımcılar için sürekli hukuki varlık yönetimi sağlıyoruz. Kurumsal standartlarda kira sözleşmelerinin hazırlanması, kira artış süreçlerinin yönetimi ve gerektiğinde tahliye süreçlerinin hızlıca yürütülmesi konularında uzmanız. Gayrimenkul portföyünüzü bir işletme titizliğiyle ele alıyor, hukuki riskleri minimize ediyoruz."
+                    content: "Birden fazla mülkü olan yatırımcılar için sürekli hukuki varlık yönetimi sağlıyoruz. Kurumsal standartlarda kira sözleşmelerinin hazırlanması, kira artış süreçlerinin yönetimi ve gerektiğinde tahliye süreçlerinin hızlıca yürütülmesi konularında uzmanız. Gayrimenkul portföyünüzü bir işletme titizliğiyle ele alıyor, hukuki riskleri minimize ediyoruz.",
+                    image: "/images/asset-management.jpg"
                 }
             ]
         },

@@ -9,7 +9,11 @@ export default function Hero() {
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden bg-primary">
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-slate-900/90 z-0" />
+            {/* Background Image & Gradient */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat" />
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-900/90 z-10" />
+            </div>
 
             {/* Elegant Noise/Grain Overlay for Texture */}
             <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('/noise.svg')]" />

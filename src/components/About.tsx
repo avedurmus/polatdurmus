@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/lib/LanguageContext';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function About() {
     const { t } = useLanguage();
@@ -51,12 +52,15 @@ export default function About() {
                         <div className="relative aspect-[4/5] w-full max-w-lg mx-auto lg:ml-auto rounded-sm overflow-hidden shadow-2xl">
                             {/* Placeholder for a high-quality office or team image. 
                                 Using a gradient/abstract block for now to maintain aesthetic until real image provided. */}
-                            <div className="absolute inset-0 bg-slate-800 flex items-center justify-center text-white/10">
-                                <span className="text-9xl font-serif font-black opacity-20">P&D</span>
-                            </div>
+                            <Image
+                                src="/images/about-office.jpg"
+                                alt="Law Firm Office"
+                                fill
+                                className="object-cover"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
 
-                            <div className="absolute bottom-0 left-0 p-8 text-white">
+                            <div className="absolute bottom-0 left-0 p-8 text-white z-10">
                                 <div className="text-xl font-serif italic opacity-90">
                                     "Justice is the constant and perpetual wish to render to every man his due."
                                 </div>

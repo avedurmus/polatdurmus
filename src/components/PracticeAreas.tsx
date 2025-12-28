@@ -6,8 +6,19 @@ import Link from 'next/link';
 
 const items = [Globe, Briefcase, Building2, Shield, Scale, Key];
 
-export default function PracticeAreas() {
-    const { t } = useLanguage();
+export default function PracticeAreas({ sanityData = [] }: { sanityData?: any[] }) {
+    const { t, language } = useLanguage();
+
+    // Mapping for filtered sanity items to display format
+    const sanityItems = sanityData?.map(item => ({
+        title: language === 'tr' ? item.title_tr : item.title_en,
+        description: language === 'tr' ? item.description_tr : item.description_en,
+        slug: item.slug,
+        image: item.image
+    })).filter(item => item.title); // Filter out items without title in current language
+
+    // Use Sanity items if available, otherwise fallback to static content
+    const displayItems = sanityItems && sanityItems.length > 0 ? sanityItems : t.practice_areas.items;
 
     return (
         <section id="practice-areas" className="py-32 bg-slate-50 dark:bg-slate-950/50">
@@ -23,9 +34,9 @@ export default function PracticeAreas() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {t.practice_areas.items.map((area, index) => {
-                        const Icon = items[index];
-                        const slug = (area as any).slug; // Type assertion since we just added it
+                    {displayItems.map((area, index) => {
+                        const Icon = items[index % items.length]; // Cycle through icons
+                        const slug = (area as any).slug;
                         return (
                             <Link href={`/practice/${slug}`} key={index} className="block group">
                                 <div
@@ -41,7 +52,7 @@ export default function PracticeAreas() {
                                         {area.description}
                                     </p>
                                     <div className="mt-6 flex items-center text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase tracking-widest">
-                                        {useLanguage().language === 'en' ? 'Read More' : 'Detaylı İncele'}
+                                        {language === 'en' ? 'Read More' : 'Detaylı İncele'}
                                     </div>
                                 </div>
                             </Link>

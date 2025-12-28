@@ -27,6 +27,7 @@ export default function Navbar() {
                     <Link href="#about" className="text-gray-300 hover:text-white transition-colors uppercase text-xs">{t.navbar.about}</Link>
                     <Link href="#practice-areas" className="text-gray-300 hover:text-white transition-colors uppercase text-xs">{t.navbar.practice_areas}</Link>
                     <Link href="#global" className="text-gray-300 hover:text-white transition-colors uppercase text-xs">{t.navbar.global_reach}</Link>
+                    <Link href="/randevu" className="text-accent hover:text-white transition-colors uppercase text-xs font-semibold">{t.navbar.book_appointment}</Link>
                     <Link href="#contact" className="px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition-all uppercase text-xs rounded-sm">{t.navbar.contact}</Link>
                     <button
                         onClick={toggleLanguage}
