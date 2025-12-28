@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 import JsonLd from "@/components/JsonLd";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import "./globals.css";
@@ -78,6 +79,7 @@ export default function RootLayout({
           <main className="flex-grow">
             {children}
           </main>
+          <Chatbot />
           <Footer />
         </LanguageProvider>
       </body>

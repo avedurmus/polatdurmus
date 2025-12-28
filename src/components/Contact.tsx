@@ -158,7 +158,7 @@ export default function Contact() {
                     {/* Map */}
                     <div className="lg:w-1/2 h-[500px] lg:h-auto bg-slate-100 rounded-sm overflow-hidden relative shadow-lg">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.6672688775456!2d29.21854597656641!3d40.92310197136208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3291501700687%3A0x66be74c3e8a719c8!2sMai%20Residence!5e0!3m2!1sen!2str!4v1701955148000!5m2!1sen!2str"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.701992719809!2d29.218975200000003!3d40.900351500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac48dec79614d%3A0x3c934d7002e8fd2b!2sAsil%20Hukuk%20B%C3%BCrosu!5e0!3m2!1str!2str!4v1766920586159!5m2!1str!2str"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
