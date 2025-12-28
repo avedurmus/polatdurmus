@@ -3,6 +3,6 @@ export const apiVersion =
 
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
 
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'opr0J5I4i';
+export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'kmabp6e9';
 
 export const useCdn = false
