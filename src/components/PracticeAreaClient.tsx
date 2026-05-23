@@ -54,7 +54,7 @@ export default function PracticeAreaClient({ slug, sanityData }: { slug: string,
                 </div>
                 <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-5 pointer-events-none z-10" />
                 <div className="container mx-auto px-6 relative z-10">
-                    <Link href="/#practice-areas" className="inline-flex items-center text-accent hover:text-white transition-colors mb-6 text-sm uppercase tracking-wider font-medium">
+                    <Link href={language === 'en' ? "/en#practice-areas" : "/#practice-areas"} className="inline-flex items-center text-accent hover:text-white transition-colors mb-6 text-sm uppercase tracking-wider font-medium">
                         <ArrowLeft size={16} className="mr-2" />
                         {language === 'en' ? 'Back to Practice Areas' : 'Uzmanlık Alanlarına Dön'}
                     </Link>
@@ -98,7 +98,7 @@ export default function PracticeAreaClient({ slug, sanityData }: { slug: string,
 
                     <div className="mt-12 flex justify-end">
                         <Link
-                            href="/#contact"
+                            href={language === 'en' ? "/en#contact" : "/#contact"}
                             className="px-8 py-4 bg-primary text-white font-bold rounded-sm hover:bg-accent transition-colors shadow-lg"
                         >
                             {language === 'en' ? 'Consult Our Team' : 'Ekibimize Danışın'}

@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://polatdurmus.com",
     languages: {
-      'en-US': '/en',
-      'tr-TR': '/tr',
+      'en': 'https://polatdurmus.com/en',
+      'tr': 'https://polatdurmus.com',
     },
   },
   openGraph: {

@@ -38,7 +38,7 @@ export default function PracticeAreas({ sanityData = [] }: { sanityData?: any[] 
                         const Icon = items[index % items.length]; // Cycle through icons
                         const slug = (area as any).slug;
                         return (
-                            <Link href={`/practice/${slug}`} key={index} className="block group">
+                            <Link href={language === 'en' ? `/en/practice/${slug}` : `/practice/${slug}`} key={index} className="block group">
                                 <div
                                     className="h-full p-10 bg-white dark:bg-slate-900 rounded-sm shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 border border-gray-100 dark:border-slate-800"
                                 >
