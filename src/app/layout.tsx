@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
@@ -82,6 +83,7 @@ export default function RootLayout({
           <Chatbot />
           <Footer />
         </LanguageProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
